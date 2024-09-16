@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    font-family: roboto, arial;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #0f0f0f;
+    /* padding-top: 120px;
+    padding-left: 72px; */
+    padding: 120px 20px 120px 92px;
+}
+
+button{
+    cursor: pointer;
+}
+
+@media (min-width: 1300px){
+    .video-grid{
+        margin-left: 200px;
+    }
+}

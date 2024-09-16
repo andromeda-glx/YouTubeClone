@@ -1,0 +1,245 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+    /* background-color: lightblue; */
+    background-color: #0f0f0f;
+    position: fixed;
+
+    top:0;
+    left: 0;
+    right: 0;
+    height: 61px;
+
+    z-index: 100;
+}
+
+.tooltip{
+    position: absolute;
+
+    background-color: rgba(109, 109, 109, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    pointer-events: none; /* tooltip doesn't show up when we hover over them */
+    white-space: nowrap; /* prevent the text to wrap around and creat a new line */
+}
+
+.tooltip-down{
+    bottom: -50px;
+}
+
+.tooltip-up{
+    top: 50px;
+}
+
+/* LEFT Section */
+
+.left-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-icon{
+    height: 24px;
+    margin: 0 19px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+.hamburger-icon:hover{
+    background-color: #616161;
+}
+
+.youtube-logo{
+    height: 20px;
+}
+
+/* MIDDLE Section */
+
+.middle-section{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 620px;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-bar{
+    height: 36px;
+    border: 1px solid #464646;
+    background-color: #161616;
+    border-radius: 50px 0 0 50px;
+    padding-left: 12px;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    width: 0; /* Search boxes have a default width so we need to reset it in order to shrink them completely */
+
+    flex: 1;
+}
+
+.search-bar::placeholder{
+    color: #aaa;
+    font-family: roboto, 'Arial';
+    font-size: 18px;
+}
+
+.search-bar:focus{
+    border: 1px solid rgb(63, 63, 233);
+    background-color: #000;
+}
+
+.voice-search-btn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #353535;
+    margin-left: 12px;
+    transition: background-color 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.voice-search-btn:hover{
+    background-color: #5a5a5a;
+}
+
+.voice-search-btn img{
+    height: 60%;
+}
+
+.voice-search-btn:hover .tooltip{
+    opacity: 1;
+}
+
+.search-btn{
+    width: 60px;
+    height: 40px;
+    background-color: #353535;
+    border: 1px solid #464646;
+    border-radius: 0 50px 50px 0;
+    margin-left: -1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.search-btn img{
+    height: 80%;
+}
+
+
+.search-btn:hover .tooltip{
+    opacity: 1;
+}
+
+/* RIGHT Section*/
+
+.right-section{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-right: 30px;
+    width: 200px;
+    flex-shrink: 0; /* this prevents items insode flex box to get closer together or to shrink */
+}
+
+.right-icons{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 5px;
+}
+
+.right-icons:hover{
+    background-color: #616161;
+}
+
+.user-profile-pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.notifications-icon-c{
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notifications-icon-c:hover .tooltip,
+.user-profile-pic-c:hover .tooltip,
+.youtube-apps-c:hover .tooltip,
+.upload-icon-co:hover .tooltip{
+    opacity: 1;
+}
+
+.notifications{
+    position: absolute;
+    background-color: #00A79D;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    height: 12px;
+    width: 12px;
+    top: 0px;
+    right: 0;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-icon-co{
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.youtube-apps-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.user-profile-pic-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
